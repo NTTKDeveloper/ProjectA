@@ -1,7 +1,7 @@
 name: Acquire activation file
 on:
-  branches:
-     - master
+  push:
+    branches: [android]
 jobs:
   activation:
     name: Request manual activation file 🔑
