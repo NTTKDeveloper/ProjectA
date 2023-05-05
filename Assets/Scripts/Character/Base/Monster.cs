@@ -14,7 +14,8 @@ public class Monster : MonoBehaviour
     protected float health;
     //Giá trị xác định xem quái có đc Spawn lại không
     protected bool isSpawning;
-
+    //Biến kiểm tra xem có bị tấn công hay không?
+    protected bool isAttack;
     //--------------------------
     protected virtual void Start(){
         //AddComponent
@@ -22,6 +23,13 @@ public class Monster : MonoBehaviour
         boxCollider2d = this.gameObject.AddComponent<BoxColider2D>();
         rigidbody2d = this.gameObject.AddComponent<Rigidbody2D>();
         animator = this.gameObject.AddComponent<Animator>()
+    }
+
+    //Hàm trừ máu khi bị tấn công. Hàm cần bổ sung Class: Weapon
+    protected void minus_health(Weapon whatweapon){
+	    if(isAttack){
+            this.health = this.health - whatweapon.damage;
+        }
     }
 
     protected virtual void Attack(){
