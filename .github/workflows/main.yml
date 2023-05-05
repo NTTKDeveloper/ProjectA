@@ -1,10 +1,10 @@
-name Build project	
+name Build project
 
-on:   
+on:
   push:
     branch: [master]
 
-jobs:	
+jobs:
   buildForAllSupportedPlatforms:	
     name: Build for ${{ matrix.targetPlatform }}	
     runs-on: ubuntu-latest	
