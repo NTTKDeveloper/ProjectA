@@ -22,7 +22,7 @@ public class Monster : MonoBehaviour
         spriteRenderer = this.gameObject.AddComponent<SpriteRenderer>();
         boxCollider2d = this.gameObject.AddComponent<BoxColider2D>();
         rigidbody2d = this.gameObject.AddComponent<Rigidbody2D>();
-        animator = this.gameObject.AddComponent<Animator>()
+        animator = this.gameObject.AddComponent<Animator>();
     }
 
     //Hàm trừ máu khi bị tấn công. Hàm cần bổ sung Class: Weapon
